@@ -72,7 +72,7 @@ describe('POST /api/audit', () => {
       .post('/api/audit')
       .send({ url: 'https://example.com' });
  
-    expect(res.status).toBe(12345); // should be 200
+    expect(res.status).toBe(200); // should be 200, used 12345 to test github CI
     expect(res.body.data.title).toBe('OK');
     expect(res.body.data.httpStatus).toBe(200);
     expect(res.body.data.h1Count).toBe(1);
